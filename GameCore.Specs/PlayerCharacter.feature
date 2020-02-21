@@ -39,3 +39,4 @@ Scenario: Healers restore all health
 	When I take 40 damage
 	And Cast a healing spell
 	Then My health should now be 100
+
