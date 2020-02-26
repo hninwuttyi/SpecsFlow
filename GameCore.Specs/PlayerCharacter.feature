@@ -16,6 +16,7 @@ Scenario Outline: Health Reduction
 		| 40     | 60             |
 		| 50     | 50             |
 
+		@setupData
 Scenario: Taking too much damage results in player death
 	When I take 100 damage
 	Then I should be dead
@@ -53,3 +54,17 @@ Scenario: Reading a restore health scroll when over tired has no effect
 	When I take 40 damage
 	And I read a restore health scroll
 	Then My health should now be 60
+
+Scenario: Weapons are worth money
+	Given I have the following weapons
+		| name  | value |
+		| Sword | 50    |
+		| Pick  | 40    |
+		| Knife | 10    |
+	Then My weapons should be worth 100
+
+Scenario: Elf race characters don't lose magical item power
+	Given I'm an Elf
+	And I have an Amulet with a power of 200
+	When I use a magical Amulet
+	Then The Amulet power should not be reduced
