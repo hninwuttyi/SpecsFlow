@@ -20,7 +20,7 @@ Scenario Outline: Health Reduction
 Scenario: Taking too much damage results in player death
 	When I take 100 damage
 	Then I should be dead
-
+	@elf
 Scenario: Elf race characters get additional 20 damage resistance
 	And I have a damage resistance of 10
 	And I'm an Elf

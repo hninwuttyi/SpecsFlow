@@ -179,10 +179,13 @@ this.FeatureBackground();
         [Xunit.SkippableFactAttribute(DisplayName="Elf race characters get additional 20 damage resistance")]
         [Xunit.TraitAttribute("FeatureTitle", "PlayerCharacter")]
         [Xunit.TraitAttribute("Description", "Elf race characters get additional 20 damage resistance")]
+        [Xunit.TraitAttribute("Category", "elf")]
         public virtual void ElfRaceCharactersGetAdditional20DamageResistance()
         {
-            string[] tagsOfScenario = ((string[])(null));
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Elf race characters get additional 20 damage resistance", null, ((string[])(null)));
+            string[] tagsOfScenario = new string[] {
+                    "elf"};
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Elf race characters get additional 20 damage resistance", null, new string[] {
+                        "elf"});
 #line 24
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
